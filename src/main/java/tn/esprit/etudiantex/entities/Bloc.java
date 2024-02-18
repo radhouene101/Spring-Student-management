@@ -7,6 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,4 +23,8 @@ public class Bloc {
     private String nomBloc;
     @Column(name = "capaciteBloc")
     private long capaciteBloc;
+    @OneToMany(mappedBy = "bloc")
+    private List<Chambre> chambres;
+    @ManyToOne
+    private Foyer foyer;
 }

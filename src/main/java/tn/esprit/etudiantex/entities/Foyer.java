@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -20,4 +22,8 @@ public class Foyer {
     private String nomFoyer;
     @Column(name = "capaciteFoyer")
     private long capaciteFoyer;
+    @OneToMany
+    private List<Bloc> blocs;
+    @OneToOne
+    private Universite universite;
 }

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -25,5 +26,7 @@ public class Reservation {
     @Column(name = "isValide")
     private boolean estValide;
 
+    @ManyToMany(mappedBy = "reservations")
+    private List<Etudiant> etudiants;
 
 }

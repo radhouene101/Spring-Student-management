@@ -15,9 +15,11 @@ public class Universite {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idUniversite")
-private long idUniversite;
+    private long idUniversite;
     @Column(name = "nomUniversite")
-private String nomUniversite;
+    private String nomUniversite;
     @Column(name = "adresse")
-private String adresse;
+    private String adresse;
+    @OneToOne(mappedBy = "universite")
+    private Foyer foyer;
 }

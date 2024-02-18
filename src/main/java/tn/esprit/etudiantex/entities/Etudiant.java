@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -28,4 +29,7 @@ public class Etudiant {
     private String ecole;
     @Column(name = "dateNaissance")
     private Date dateNaissance;
+
+    @ManyToMany
+    private List<Reservation> reservations;
 }
