@@ -29,4 +29,5 @@ public class Reservation {
     @ManyToMany(mappedBy = "reservations")
     private List<Etudiant> etudiants;
 
+
 }
