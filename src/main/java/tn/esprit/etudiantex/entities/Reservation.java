@@ -18,7 +18,7 @@ public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idR")
-    private long idReservation;
+    private Integer idReservation;
 
     @Column(name = "aneeUniversitaire")
     private Date anneeUniversitaire;

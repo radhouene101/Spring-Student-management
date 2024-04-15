@@ -17,7 +17,7 @@ public class Chambre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idChambre")
-    private long idChambre;
+    private Integer idChambre;
     @Column(name = "numeroChambre")
     private long numeroChambre;
     @Enumerated(EnumType.STRING)
